@@ -1,0 +1,29 @@
+
+.item-basket {
+	padding-bottom : 20px;
+}
+
+.item-basket p{
+	float : right;
+	margin-top: 10px;
+	margin-right:40vw;
+	font-size:2vw;
+}
+
+.confirm_order {
+	text-align:center;
+	font-size:3vw;
+    padding-bottom: 150px;
+}
+
+.btn-order {
+	margin-top:5px;
+	border: 1px solid rgb(167, 164, 164);
+	border-radius: 3px;
+	font-size: 2vw;
+	box-shadow: -1px 2px 10px 3px rgba(167, 164, 164, 0.3) inset;
+}
+
+.remove_item {
+	margin-bottom: 50px;
+}

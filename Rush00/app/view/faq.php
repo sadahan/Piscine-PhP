@@ -1,0 +1,1 @@
+<div class="middle"><img src='https://www.icynene.fr/wp-content/uploads/2019/03/faq-isolation-770x374.jpg'></div>

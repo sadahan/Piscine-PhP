@@ -1,0 +1,30 @@
+.button_admin{
+	background-color: rgb(87, 184, 211);
+	background-image: -webkit-linear-gradient(top,rgb(87, 184, 211) 0%,  rgb(3, 119, 151) 100%);
+	background-image:linear-gradient(to bottom,rgb(87, 184, 211) 0%,  rgb(3, 119, 151) 100%);
+	margin:auto;
+	height: 10px;
+	width:200px;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	text-align:center;
+}
+
+.button_admin a{
+	color: white;
+	text-decoration: none;
+}
+
+.admin_middle {
+	height: 100%;
+	padding-bottom: 203px;
+
+}
+
+.listadmo {
+	font-size: larger;
+    margin-bottom: 50px;
+}
