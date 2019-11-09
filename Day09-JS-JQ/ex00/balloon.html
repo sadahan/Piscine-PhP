@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>balloon</title>
+        <script type="text/javascript">
+
+            function changeSize_color() {
+                var div=document.getElementById('balloon');
+                var w=div.clientWidth;
+                var h=div.clientHeight;
+                if (w < 420)
+                {
+                    div.style.height = (h +10) + "px";
+                    div.style.width = (w + 10) + "px";
+                }
+                else
+                {
+                    div.style.height = "200px";
+                    div.style.width = "200px";
+                }
+                if (div.style.backgroundColor === "red")
+                    div.style.backgroundColor = "green";
+                else if (div.style.backgroundColor === "green")
+                    div.style.backgroundColor = "blue";
+                else if (div.style.backgroundColor === "blue")
+                    div.style.backgroundColor = "red";
+            }
+
+            function change_back() {
+                var div=document.getElementById('balloon');
+                var w=div.clientWidth;
+                var h=div.clientHeight;
+                if (w > 200)
+                {
+                    div.style.height = (h -5) + "px" ;
+                    div.style.width = (w -5) + "px";
+                }
+                if (div.style.backgroundColor === "red")
+                    div.style.backgroundColor = "blue";
+                else if (div.style.backgroundColor === "green")
+                    div.style.backgroundColor = "red";
+                else if (div.style.backgroundColor === "blue")
+                    div.style.backgroundColor = "green";
+            }
+          </script>
+    </head>
+    <body>
+        <div id="balloon" style="background-color:red; width:200px; height:200px; border-radius:100%; margin-top:25%; margin-left:30%;" onclick="changeSize_color()" onmouseOut="change_back()">
+        </div>
+    </body>
+</html>

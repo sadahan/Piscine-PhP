@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>balloon</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script>
+                $(document).ready(function() {
+                    $("#balloon").click(function(){
+                    var w = $(this).width();
+                    var h = $(this).height();
+                    if (w < 420)
+                        $(this).height(h+10).width(w+10);
+                    else
+                        $(this).height(200).width(200);
+                    if($(this).css("background-color") == "rgb(255, 0, 0)")
+                        $(this).css("background-color", "green");
+                    else if($(this).css("background-color") == "rgb(0, 128, 0)")
+                        $(this).css("background-color", "blue");
+                    else if($(this).css("background-color") == "rgb(0, 0, 255)")
+                        $(this).css("background-color", "red");
+                    });
+                    $("#balloon").mouseout(function(){
+                    var w = $(this).width();
+                    var h = $(this).height();
+                    if (w > 200)
+                        $(this).height(h-5).width(w-5);
+                    if($(this).css("background-color") == "rgb(255, 0, 0)")
+                        $(this).css("background-color", "blue");
+                    else if($(this).css("background-color") == "rgb(0, 128, 0)")
+                        $(this).css("background-color", "red");
+                    else if($(this).css("background-color") == "rgb(0, 0, 255)")
+                        $(this).css("background-color", "green");
+                    });
+                });
+        </script>
+    </head>
+    <body>
+        <div id="balloon" style="background-color:red; width:200px; height:200px; border-radius:100%; margin-top:25%; margin-left:30%;" ></div>
+    </body>
+</html>

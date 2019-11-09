@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+    <title>calc</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+            alert("Please, use me...")}, 30000)
+            $("#sub").click(function() {
+            var num_1 = parseFloat($("#left_num").val());
+            var num_2 = parseFloat($("#right_num").val());
+            var op = $("#op").val();
+
+            if (isNaN(num_1) || isNaN(num_2) || num_1 < 0 || num_2 <0)
+            {
+                alert("Error :(");
+                console.log("Error :(");
+            }  
+            else if ((op === "/" || op === "%") && num_2 === 0)
+            {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+            }
+            else
+            {
+                var res = num_1;
+                if (op === "+")
+                    res += num_2;
+                if (op === "-")
+                    res -= num_2;
+                if (op === "/")
+                    res /= num_2;
+                if (op === "*")
+                    res *= num_2;
+                if (op === "%")
+                    res %= num_2;
+                alert(res);
+                console.log(res);
+            }
+            });
+        });
+    </script>
+    </head>
+    <body>
+
+        <input id="left_num" type="text">
+        <select id="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input id="right_num" type="text">
+        <input id="sub" type="submit" value="Try me!">
+    </body>
+</html>

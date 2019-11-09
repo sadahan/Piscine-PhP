@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+    <title>calc</title>
+    <script>
+        
+        setInterval(() => {
+            alert("Please, use me...")
+        }, 30000)
+
+        function calc() {
+            var num_1=parseFloat(document.getElementById("left_num").value, 10);
+            var num_2=parseFloat(document.getElementById("right_num").value, 10);
+            var op = document.getElementById("op").value;
+            
+            if (isNaN(num_1) || isNaN(num_2) || num_1 < 0 || num_2 <0)
+            {
+                alert("Error :(");
+                console.log("Error :(");
+            }  
+            else if ((op === "/" || op === "%") && num_2 === 0)
+            {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+            }
+            else
+            {
+                var res = num_1;
+                if (op === "+")
+                    res += num_2;
+                if (op === "-")
+                    res -= num_2;
+                if (op === "/")
+                    res /= num_2;
+                if (op === "*")
+                    res *= num_2;
+                if (op === "%")
+                    res %= num_2;
+                alert(res);
+                console.log(res);
+            }
+        }
+    </script>
+    </head>
+    <body>
+
+        <input id="left_num" type="text">
+        <select id="op">
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+            <option>%</option>
+        </select>
+        <input id="right_num" type="text">
+        <input id="sub" type="submit" value="Try me!" onclick="calc()">
+    </body>
+</html>
